@@ -12,6 +12,7 @@ export function ProgramPage({
   image,
   imageAlt,
   headerActions,
+  showCta = true,
   children,
 }: {
   program: Program;
@@ -21,6 +22,7 @@ export function ProgramPage({
   image: string;
   imageAlt: string;
   headerActions?: ReactNode;
+  showCta?: boolean;
   children: ReactNode;
 }) {
   return (
@@ -45,7 +47,7 @@ export function ProgramPage({
           </div>
         </div>
       </section>
-      <CtaBand />
+      {showCta && <CtaBand />}
     </>
   );
 }
