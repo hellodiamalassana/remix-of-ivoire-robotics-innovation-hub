@@ -27,12 +27,12 @@ function NotFoundComponent() {
         La page demandée n'existe pas ou a changé d'adresse. Voici où vous voulez probablement aller :
       </p>
       <ul className="mt-8 grid w-full max-w-2xl gap-3 sm:grid-cols-2">
-        {[
+        {([
           { to: "/stem-camp", label: "STEM Camp Vacances" },
           { to: "/formations", label: "Formations" },
           { to: "/competitions", label: "Compétitions" },
           { to: "/contact", label: "Nous contacter" },
-        ].map((l) => (
+        ] as const).map((l) => (
           <li key={l.to}>
             <Link
               to={l.to}

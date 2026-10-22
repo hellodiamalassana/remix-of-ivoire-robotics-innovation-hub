@@ -80,6 +80,12 @@ export const KEY_FIGURES = [
 
 export type ProgramSlug = "formations" | "competitions" | "stem-camp";
 
+export const PROGRAM_PATHS = {
+  formations: "/formations",
+  competitions: "/competitions",
+  "stem-camp": "/stem-camp",
+} as const satisfies Record<ProgramSlug, string>;
+
 export interface Program {
   slug: ProgramSlug;
   title: string;

@@ -5,10 +5,10 @@ import hero from "@/assets/hero-atelier.webp";
 import imgFormations from "@/assets/prog-formations.webp";
 import imgCompetitions from "@/assets/prog-competitions.webp";
 import imgStem from "@/assets/prog-stemcamp.webp";
-import { CtaBand, Fill, SectionTitle, StemCampCta } from "@/components/site/blocks";
+import { Fill, SectionTitle, StemCampCta } from "@/components/site/blocks";
 import { StemFaq } from "@/components/site/StemFaq";
 import { Button } from "@/components/ui/button";
-import { CONTACT, KEY_FIGURES, PROGRAMS, STEM_CAMP, whatsappUrl } from "@/lib/site";
+import { CONTACT, KEY_FIGURES, PROGRAM_PATHS, PROGRAMS, STEM_CAMP, whatsappUrl } from "@/lib/site";
 import { seo } from "@/lib/seo";
 
 export const Route = createFileRoute("/")({
@@ -106,7 +106,7 @@ function Index() {
           {PROGRAMS.map((p, i) => (
             <li key={p.slug}>
               <Link
-                to={`/${p.slug}`}
+                to={PROGRAM_PATHS[p.slug]}
                 className="group flex h-full flex-col overflow-hidden rounded-3xl border border-border bg-card shadow-card transition-all hover:-translate-y-1 hover:shadow-lift"
               >
                 <div className="relative aspect-[4/3] overflow-hidden">
@@ -289,4 +289,3 @@ function Index() {
   );
 }
 
-export { CtaBand };
