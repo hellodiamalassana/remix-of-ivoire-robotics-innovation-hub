@@ -11,10 +11,18 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AProposRouteImport } from './routes/a-propos'
+import { Route as ActualitesRouteImport } from './routes/actualites'
 import { Route as CompetitionsRouteImport } from './routes/competitions'
+import { Route as ConfidentialiteRouteImport } from './routes/confidentialite'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as ContactUsRouteImport } from './routes/contact-us'
 import { Route as FormationsRouteImport } from './routes/formations'
+import { Route as FormationsDansLesEcolesPartenairesRouteImport } from './routes/formations-dans-les-ecoles-partenaires'
+import { Route as MentionsLegalesRouteImport } from './routes/mentions-legales'
+import { Route as NousSoutenirRouteImport } from './routes/nous-soutenir'
 import { Route as ProgrammesRouteImport } from './routes/programmes'
 import { Route as StemCampRouteImport } from './routes/stem-camp'
+import { Route as StemCampsVacancesRouteImport } from './routes/stem-camps-vacances'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -26,14 +34,50 @@ const AProposRoute = AProposRouteImport.update({
   path: '/a-propos',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ActualitesRoute = ActualitesRouteImport.update({
+  id: '/actualites',
+  path: '/actualites',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const CompetitionsRoute = CompetitionsRouteImport.update({
   id: '/competitions',
   path: '/competitions',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ConfidentialiteRoute = ConfidentialiteRouteImport.update({
+  id: '/confidentialite',
+  path: '/confidentialite',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactUsRoute = ContactUsRouteImport.update({
+  id: '/contact-us',
+  path: '/contact-us',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const FormationsRoute = FormationsRouteImport.update({
   id: '/formations',
   path: '/formations',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FormationsDansLesEcolesPartenairesRoute =
+  FormationsDansLesEcolesPartenairesRouteImport.update({
+    id: '/formations-dans-les-ecoles-partenaires',
+    path: '/formations-dans-les-ecoles-partenaires',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const MentionsLegalesRoute = MentionsLegalesRouteImport.update({
+  id: '/mentions-legales',
+  path: '/mentions-legales',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const NousSoutenirRoute = NousSoutenirRouteImport.update({
+  id: '/nous-soutenir',
+  path: '/nous-soutenir',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ProgrammesRoute = ProgrammesRouteImport.update({
@@ -46,66 +90,127 @@ const StemCampRoute = StemCampRouteImport.update({
   path: '/stem-camp',
   getParentRoute: () => rootRouteImport,
 } as any)
+const StemCampsVacancesRoute = StemCampsVacancesRouteImport.update({
+  id: '/stem-camps-vacances',
+  path: '/stem-camps-vacances',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/a-propos': typeof AProposRoute
+  '/actualites': typeof ActualitesRoute
   '/competitions': typeof CompetitionsRoute
+  '/confidentialite': typeof ConfidentialiteRoute
+  '/contact': typeof ContactRoute
+  '/contact-us': typeof ContactUsRoute
   '/formations': typeof FormationsRoute
+  '/formations-dans-les-ecoles-partenaires': typeof FormationsDansLesEcolesPartenairesRoute
+  '/mentions-legales': typeof MentionsLegalesRoute
+  '/nous-soutenir': typeof NousSoutenirRoute
   '/programmes': typeof ProgrammesRoute
   '/stem-camp': typeof StemCampRoute
+  '/stem-camps-vacances': typeof StemCampsVacancesRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/a-propos': typeof AProposRoute
+  '/actualites': typeof ActualitesRoute
   '/competitions': typeof CompetitionsRoute
+  '/confidentialite': typeof ConfidentialiteRoute
+  '/contact': typeof ContactRoute
+  '/contact-us': typeof ContactUsRoute
   '/formations': typeof FormationsRoute
+  '/formations-dans-les-ecoles-partenaires': typeof FormationsDansLesEcolesPartenairesRoute
+  '/mentions-legales': typeof MentionsLegalesRoute
+  '/nous-soutenir': typeof NousSoutenirRoute
   '/programmes': typeof ProgrammesRoute
   '/stem-camp': typeof StemCampRoute
+  '/stem-camps-vacances': typeof StemCampsVacancesRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/a-propos': typeof AProposRoute
+  '/actualites': typeof ActualitesRoute
   '/competitions': typeof CompetitionsRoute
+  '/confidentialite': typeof ConfidentialiteRoute
+  '/contact': typeof ContactRoute
+  '/contact-us': typeof ContactUsRoute
   '/formations': typeof FormationsRoute
+  '/formations-dans-les-ecoles-partenaires': typeof FormationsDansLesEcolesPartenairesRoute
+  '/mentions-legales': typeof MentionsLegalesRoute
+  '/nous-soutenir': typeof NousSoutenirRoute
   '/programmes': typeof ProgrammesRoute
   '/stem-camp': typeof StemCampRoute
+  '/stem-camps-vacances': typeof StemCampsVacancesRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
     | '/a-propos'
+    | '/actualites'
     | '/competitions'
+    | '/confidentialite'
+    | '/contact'
+    | '/contact-us'
     | '/formations'
+    | '/formations-dans-les-ecoles-partenaires'
+    | '/mentions-legales'
+    | '/nous-soutenir'
     | '/programmes'
     | '/stem-camp'
+    | '/stem-camps-vacances'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/a-propos'
+    | '/actualites'
     | '/competitions'
+    | '/confidentialite'
+    | '/contact'
+    | '/contact-us'
     | '/formations'
+    | '/formations-dans-les-ecoles-partenaires'
+    | '/mentions-legales'
+    | '/nous-soutenir'
     | '/programmes'
     | '/stem-camp'
+    | '/stem-camps-vacances'
   id:
     | '__root__'
     | '/'
     | '/a-propos'
+    | '/actualites'
     | '/competitions'
+    | '/confidentialite'
+    | '/contact'
+    | '/contact-us'
     | '/formations'
+    | '/formations-dans-les-ecoles-partenaires'
+    | '/mentions-legales'
+    | '/nous-soutenir'
     | '/programmes'
     | '/stem-camp'
+    | '/stem-camps-vacances'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AProposRoute: typeof AProposRoute
+  ActualitesRoute: typeof ActualitesRoute
   CompetitionsRoute: typeof CompetitionsRoute
+  ConfidentialiteRoute: typeof ConfidentialiteRoute
+  ContactRoute: typeof ContactRoute
+  ContactUsRoute: typeof ContactUsRoute
   FormationsRoute: typeof FormationsRoute
+  FormationsDansLesEcolesPartenairesRoute: typeof FormationsDansLesEcolesPartenairesRoute
+  MentionsLegalesRoute: typeof MentionsLegalesRoute
+  NousSoutenirRoute: typeof NousSoutenirRoute
   ProgrammesRoute: typeof ProgrammesRoute
   StemCampRoute: typeof StemCampRoute
+  StemCampsVacancesRoute: typeof StemCampsVacancesRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -124,6 +229,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AProposRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/actualites': {
+      id: '/actualites'
+      path: '/actualites'
+      fullPath: '/actualites'
+      preLoaderRoute: typeof ActualitesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/competitions': {
       id: '/competitions'
       path: '/competitions'
@@ -131,11 +243,53 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CompetitionsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/confidentialite': {
+      id: '/confidentialite'
+      path: '/confidentialite'
+      fullPath: '/confidentialite'
+      preLoaderRoute: typeof ConfidentialiteRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact-us': {
+      id: '/contact-us'
+      path: '/contact-us'
+      fullPath: '/contact-us'
+      preLoaderRoute: typeof ContactUsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/formations': {
       id: '/formations'
       path: '/formations'
       fullPath: '/formations'
       preLoaderRoute: typeof FormationsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/formations-dans-les-ecoles-partenaires': {
+      id: '/formations-dans-les-ecoles-partenaires'
+      path: '/formations-dans-les-ecoles-partenaires'
+      fullPath: '/formations-dans-les-ecoles-partenaires'
+      preLoaderRoute: typeof FormationsDansLesEcolesPartenairesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/mentions-legales': {
+      id: '/mentions-legales'
+      path: '/mentions-legales'
+      fullPath: '/mentions-legales'
+      preLoaderRoute: typeof MentionsLegalesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/nous-soutenir': {
+      id: '/nous-soutenir'
+      path: '/nous-soutenir'
+      fullPath: '/nous-soutenir'
+      preLoaderRoute: typeof NousSoutenirRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/programmes': {
@@ -152,16 +306,32 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof StemCampRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/stem-camps-vacances': {
+      id: '/stem-camps-vacances'
+      path: '/stem-camps-vacances'
+      fullPath: '/stem-camps-vacances'
+      preLoaderRoute: typeof StemCampsVacancesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AProposRoute: AProposRoute,
+  ActualitesRoute: ActualitesRoute,
   CompetitionsRoute: CompetitionsRoute,
+  ConfidentialiteRoute: ConfidentialiteRoute,
+  ContactRoute: ContactRoute,
+  ContactUsRoute: ContactUsRoute,
   FormationsRoute: FormationsRoute,
+  FormationsDansLesEcolesPartenairesRoute:
+    FormationsDansLesEcolesPartenairesRoute,
+  MentionsLegalesRoute: MentionsLegalesRoute,
+  NousSoutenirRoute: NousSoutenirRoute,
   ProgrammesRoute: ProgrammesRoute,
   StemCampRoute: StemCampRoute,
+  StemCampsVacancesRoute: StemCampsVacancesRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
