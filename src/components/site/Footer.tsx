@@ -108,7 +108,7 @@ export function Footer() {
   );
 }
 
-function FooterLink({ to, children }: { to: LinkProps["to"]; children: ReactNode }) {
+function FooterLink({ to, children }: { to: NonNullable<LinkProps["to"]>; children: ReactNode }) {
   return (
     <li>
       <Link to={to} className="inline-flex min-h-11 items-center text-ink-muted hover:text-ink-foreground hover:underline">
