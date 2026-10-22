@@ -1,4 +1,5 @@
-import { Link } from "@tanstack/react-router";
+import { Link, type LinkProps } from "@tanstack/react-router";
+import type { ReactNode } from "react";
 import { Facebook, Linkedin, Mail, MapPin, Phone } from "lucide-react";
 
 import logoLight from "@/assets/logo-light.webp.asset.json";
@@ -107,7 +108,7 @@ export function Footer() {
   );
 }
 
-function FooterLink({ to, children }: { to: string; children: React.ReactNode }) {
+function FooterLink({ to, children }: { to: LinkProps["to"]; children: ReactNode }) {
   return (
     <li>
       <Link to={to} className="inline-flex min-h-11 items-center text-ink-muted hover:text-ink-foreground hover:underline">
