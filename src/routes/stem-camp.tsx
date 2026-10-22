@@ -3,7 +3,7 @@ import { Bot, Code2, FlaskConical, Users } from "lucide-react";
 
 import img from "@/assets/prog-stemcamp.webp";
 import flyer from "@/assets/flyer-stem-camp.webp.asset.json";
-import { Fill, SectionTitle, StemCampCta } from "@/components/site/blocks";
+import { CtaBand, Fill, SectionTitle, StemCampCta } from "@/components/site/blocks";
 import { ProgramPage } from "@/components/site/ProgramPage";
 import { StemFaq } from "@/components/site/StemFaq";
 import { CONTACT, PROGRAMS, STEM_CAMP } from "@/lib/site";
@@ -67,6 +67,7 @@ function StemCampPage() {
         image={img}
         imageAlt="Des enfants pilotent un drone dans une cour lors du STEM Camp"
         headerActions={<StemCampCta />}
+        showCta={false}
       >
         <p>
           <strong className="text-foreground">
@@ -128,6 +129,7 @@ function StemCampPage() {
           <figcaption className="mt-3 text-sm text-muted-foreground">Affiche officielle du STEM Camp Vacances.</figcaption>
         </figure>
       </section>
+      <CtaBand />
     </>
   );
 }
