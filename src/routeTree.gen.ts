@@ -10,33 +10,102 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AProposRouteImport } from './routes/a-propos'
+import { Route as CompetitionsRouteImport } from './routes/competitions'
+import { Route as FormationsRouteImport } from './routes/formations'
+import { Route as ProgrammesRouteImport } from './routes/programmes'
+import { Route as StemCampRouteImport } from './routes/stem-camp'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AProposRoute = AProposRouteImport.update({
+  id: '/a-propos',
+  path: '/a-propos',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CompetitionsRoute = CompetitionsRouteImport.update({
+  id: '/competitions',
+  path: '/competitions',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FormationsRoute = FormationsRouteImport.update({
+  id: '/formations',
+  path: '/formations',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProgrammesRoute = ProgrammesRouteImport.update({
+  id: '/programmes',
+  path: '/programmes',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const StemCampRoute = StemCampRouteImport.update({
+  id: '/stem-camp',
+  path: '/stem-camp',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/a-propos': typeof AProposRoute
+  '/competitions': typeof CompetitionsRoute
+  '/formations': typeof FormationsRoute
+  '/programmes': typeof ProgrammesRoute
+  '/stem-camp': typeof StemCampRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/a-propos': typeof AProposRoute
+  '/competitions': typeof CompetitionsRoute
+  '/formations': typeof FormationsRoute
+  '/programmes': typeof ProgrammesRoute
+  '/stem-camp': typeof StemCampRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/a-propos': typeof AProposRoute
+  '/competitions': typeof CompetitionsRoute
+  '/formations': typeof FormationsRoute
+  '/programmes': typeof ProgrammesRoute
+  '/stem-camp': typeof StemCampRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/a-propos'
+    | '/competitions'
+    | '/formations'
+    | '/programmes'
+    | '/stem-camp'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/a-propos'
+    | '/competitions'
+    | '/formations'
+    | '/programmes'
+    | '/stem-camp'
+  id:
+    | '__root__'
+    | '/'
+    | '/a-propos'
+    | '/competitions'
+    | '/formations'
+    | '/programmes'
+    | '/stem-camp'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AProposRoute: typeof AProposRoute
+  CompetitionsRoute: typeof CompetitionsRoute
+  FormationsRoute: typeof FormationsRoute
+  ProgrammesRoute: typeof ProgrammesRoute
+  StemCampRoute: typeof StemCampRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +117,51 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/a-propos': {
+      id: '/a-propos'
+      path: '/a-propos'
+      fullPath: '/a-propos'
+      preLoaderRoute: typeof AProposRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/competitions': {
+      id: '/competitions'
+      path: '/competitions'
+      fullPath: '/competitions'
+      preLoaderRoute: typeof CompetitionsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/formations': {
+      id: '/formations'
+      path: '/formations'
+      fullPath: '/formations'
+      preLoaderRoute: typeof FormationsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/programmes': {
+      id: '/programmes'
+      path: '/programmes'
+      fullPath: '/programmes'
+      preLoaderRoute: typeof ProgrammesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/stem-camp': {
+      id: '/stem-camp'
+      path: '/stem-camp'
+      fullPath: '/stem-camp'
+      preLoaderRoute: typeof StemCampRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AProposRoute: AProposRoute,
+  CompetitionsRoute: CompetitionsRoute,
+  FormationsRoute: FormationsRoute,
+  ProgrammesRoute: ProgrammesRoute,
+  StemCampRoute: StemCampRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
