@@ -1,11 +1,11 @@
 {
-  "version": 1,
   "asset_id": "6ff16027-c337-4300-b241-d694d32e4dbf",
-  "project_id": "74ff6061-ff93-4e99-bece-f61922fd063a",
-  "url": "/__l5e/assets-v1/6ff16027-c337-4300-b241-d694d32e4dbf/flyer-stem-camp.webp",
-  "r2_key": "a/v1/74ff6061-ff93-4e99-bece-f61922fd063a/6ff16027-c337-4300-b241-d694d32e4dbf/flyer-stem-camp.webp",
-  "original_filename": "flyer-stem-camp.webp",
-  "size": 82464,
   "content_type": "image/webp",
-  "created_at": "2026-10-22T14:39:58Z"
+  "created_at": "2026-10-22T14:39:58Z",
+  "original_filename": "flyer-stem-camp.webp",
+  "project_id": "d8040f9a-a78b-4fb7-8b64-e0e29da02549",
+  "r2_key": "a/v1/d8040f9a-a78b-4fb7-8b64-e0e29da02549/6ff16027-c337-4300-b241-d694d32e4dbf/flyer-stem-camp.webp",
+  "size": 82464,
+  "url": "/__l5e/assets-v1/6ff16027-c337-4300-b241-d694d32e4dbf/flyer-stem-camp.webp",
+  "version": 1
 }

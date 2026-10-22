@@ -1,11 +1,11 @@
 {
-  "version": 1,
   "asset_id": "3f497548-7725-439b-84f3-1c2f132038b5",
-  "project_id": "74ff6061-ff93-4e99-bece-f61922fd063a",
-  "url": "/__l5e/assets-v1/3f497548-7725-439b-84f3-1c2f132038b5/logo.webp",
-  "r2_key": "a/v1/74ff6061-ff93-4e99-bece-f61922fd063a/3f497548-7725-439b-84f3-1c2f132038b5/logo.webp",
-  "original_filename": "logo.webp",
-  "size": 10410,
   "content_type": "image/webp",
-  "created_at": "2026-10-22T14:39:48Z"
+  "created_at": "2026-10-22T14:39:48Z",
+  "original_filename": "logo.webp",
+  "project_id": "d8040f9a-a78b-4fb7-8b64-e0e29da02549",
+  "r2_key": "a/v1/d8040f9a-a78b-4fb7-8b64-e0e29da02549/3f497548-7725-439b-84f3-1c2f132038b5/logo.webp",
+  "size": 10410,
+  "url": "/__l5e/assets-v1/3f497548-7725-439b-84f3-1c2f132038b5/logo.webp",
+  "version": 1
 }
